@@ -66,7 +66,7 @@ def eularian_path(graph, start=None, circuit=False):
         route = fleury_walk(graph, start, circuit)
         if len(route) == len(graph) + 1:  # We visited every edge
             route = ['{0:08b}'.format(node-1) for node in route]
-            print(len(route))
+            print("Tamanho da solução: " + str(len(route)) + " entradas")
             return route, i
     return [], i  # Never found a solution
 
